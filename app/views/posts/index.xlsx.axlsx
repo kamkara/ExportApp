@@ -1,0 +1,10 @@
+workbook = xlsx_package.workbook
+
+workbook.add_worksheet(name: "Posts") do |sheet|
+  # Create the header row
+  sheet.add_row ["Post Name", "Post Content", "Quantity"]
+  # Create entries for each item post
+  @posts.each do |post|
+    sheet.add_row [post.name, post.content, post.quantity]
+  end
+end

@@ -23,10 +23,12 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 
-
+#popular db
 gem 'faker', '~> 2.17'
 
-
+#Export Excel
+gem 'caxlsx'
+gem 'caxlsx_rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

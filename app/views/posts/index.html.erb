@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
+<%= link_to posts_path(format: :xlsx) do %>
+  <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+		<span>Export Post</span>
+	</button>
+<% end %>
 
 <table>
   <thead>

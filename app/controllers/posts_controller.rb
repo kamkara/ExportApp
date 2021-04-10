@@ -3,9 +3,18 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all#call in index.xlsx.axlsx
+    respond_to do |format|
+      format.xlsx {  
+        response.headers[
+          response.headers['Content-Disposition'] =
+           'attachment; filename="Posts.xlsx"'
+        ]
+      }
+      format.html{ render :index}
+    end
   end
-
+ 
   # GET /posts/1 or /posts/1.json
   def show
   end
